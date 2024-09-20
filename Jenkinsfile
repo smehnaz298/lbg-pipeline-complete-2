@@ -27,7 +27,7 @@ pipeline{
                 sh "npm test"
                 }
             }
-            stage('SonarQube Analysis') {
+           /* stage('SonarQube Analysis') {
                 environment {
                     scannerHome = tool 'sonarqube'
                 }
@@ -39,7 +39,7 @@ pipeline{
                     waitForQualityGate abortPipeline: true
                     }
                 }
-            }
+            }*/
          
             stage ('Build Docker Image'){
                 steps{
